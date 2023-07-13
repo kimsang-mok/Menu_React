@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
-import Order from './Order';
+import { Link } from 'react-router-dom';
+
 function MenuCard(props) {
-    const [activeContentIndex, setActiveContentIndex] = useState();
-
-
-    function testFunc() {
-        setActiveContentIndex(props.id)
-        console.log(activeContentIndex)
-    }
+    // const [activeContent, setActiveContent] = useState(false);
 
     return (
-        <div className='items' onClick={testFunc}>
-            <img src={props.item_path} />
-            <p className="name">{props.item_name}</p>
-        </div>
+        <>
+            <Link to={`/items/${props.id}`} className='items'>
+                <img src={props.item_path} />
+                <p className="name">{props.item_name}</p>
+            </Link>
+        </>
     )
 }
 

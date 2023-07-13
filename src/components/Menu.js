@@ -1,12 +1,13 @@
 import MenuCard from "./MenuCard"
 import "./Menu.scss"
 
+
 const drinks = [
-    { item_name: 'Oleato™', item_path: './images/menu/Oleato™.jpg', id: 0 },
+    { item_name: 'Oleato™', item_path: './images/menu/Oleato™.jpg', id: 0, size: ['small', 'medium', 'large'] },
     { item_name: 'Hot Coffees', item_path: './images/menu/Hot Coffees.jpg', id: 1 },
-    { item_name: 'Hot Teas', item_path: './images/menu/Hot Teas.jpg' },
-    { item_name: 'Hot Drinks', item_path: './images/menu/Hot Drinks.jpg' },
-    { item_name: 'Frappuccino® Blended Beverages', item_path: './images/menu/Frappuccino® Blended Beverages.jpg' },
+    { item_name: 'Hot Teas', item_path: './images/menu/Hot Teas.jpg', id: 2 },
+    { item_name: 'Hot Drinks', item_path: './images/menu/Hot Drinks.jpg', id: 3 },
+    { item_name: 'Frappuccino® Blended Beverages', item_path: './images/menu/Frappuccino® Blended Beverages.jpg', id: 4 },
     { item_name: 'Cold Coffees', item_path: './images/menu/Cold Coffees.jpg' },
     { item_name: 'Iced Teas', item_path: './images/menu/Iced Teas.jpg' },
     { item_name: 'Cold Drinks', item_path: './images/menu/Cold Drinks.jpg' },
@@ -32,10 +33,13 @@ const merchandise = [
     { item_name: 'Other', item_path: './images/menu/Other.jpg' },
 ]
 
-function Menu() {
+function Menu(props) {
+
+
     return (
         <main className="main_container">
             <div className="sidebar">
+                <MenuCard nothingHere='hello' />
                 <h4>Drinks</h4>
                 <ul>
                     <li>Oleato</li>
@@ -84,7 +88,7 @@ function Menu() {
                 ))}
             </section>
 
-        </main>
+        </main >
     )
 }
 
